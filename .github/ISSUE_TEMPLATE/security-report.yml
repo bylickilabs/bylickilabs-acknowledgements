@@ -1,5 +1,5 @@
-name: Security Report / Sicherheitsmeldung
-description: Report a potential security issue affecting bylickilabs.de or a BYLICKILABS web component.
+name: Sicherheitsmeldung
+description: Melde ein potenzielles Sicherheitsproblem, das bylickilabs.de oder eine BYLICKILABS Webkomponente betrifft.
 title: "[SECURITY] "
 assignees:
   - bylickilabs
@@ -8,37 +8,37 @@ body:
   - type: markdown
     attributes:
       value: |
-        # BYLICKILABS Security Report
+        # BYLICKILABS Sicherheitsmeldung
 
-        Thank you for responsibly reporting a potential security issue affecting **bylickilabs.de** or a related BYLICKILABS component.
+        Vielen Dank, dass du ein potenzielles Sicherheitsproblem auf **bylickilabs.de** oder einer zugehörigen BYLICKILABS Komponente verantwortungsvoll meldest.
 
-        **Important:** This form creates a **public GitHub issue**. Do **not** include passwords, API keys, access tokens, private keys, personal data, confidential information or unnecessary exploit details. If the finding contains sensitive information that should not be publicly disclosed, do not submit those details through this form.
+        **Wichtig:** Dieses Formular erstellt ein **öffentliches GitHub Issue**. Gib **keine** Passwörter, API Keys, Access Tokens, Private Keys, personenbezogenen Daten, vertraulichen Informationen oder unnötigen Exploit Details an. Wenn der Befund sensible Informationen enthält, die nicht öffentlich zugänglich sein sollten, übermittle diese Details nicht über dieses Formular.
 
-        After submission, the finding will be reviewed and technically verified. If confirmed, the affected BYLICKILABS component can be corrected and the researcher may be considered for recognition in the Security Acknowledgements.
+        Nach dem Absenden wird die Meldung geprüft und technisch verifiziert. Wird der Befund bestätigt, kann die betroffene BYLICKILABS Komponente korrigiert und der Security Researcher anschließend für eine Aufnahme in die Security Acknowledgements berücksichtigt werden.
 
   - type: input
     id: researcher
     attributes:
-      label: Researcher Name or Alias
-      description: Enter the name, alias or pseudonym you want associated with this report.
-      placeholder: "Example: researcher-name"
+      label: Name oder Alias des Security Researchers
+      description: Gib den Namen, Alias oder das Pseudonym an, das mit dieser Meldung verknüpft werden soll.
+      placeholder: "Beispiel: researcher-name"
     validations:
       required: false
 
   - type: input
     id: contact
     attributes:
-      label: Contact Information
-      description: Optional contact information for follow-up communication.
-      placeholder: GitHub profile, email address or website
+      label: Kontaktinformationen
+      description: Optionale Kontaktinformationen für mögliche Rückfragen.
+      placeholder: GitHub Profil, E-Mail-Adresse oder Website
     validations:
       required: false
 
   - type: dropdown
     id: affected-area
     attributes:
-      label: Affected Area
-      description: Select every BYLICKILABS area affected by the finding.
+      label: Betroffener Bereich
+      description: Wähle alle BYLICKILABS Bereiche aus, die von dem Befund betroffen sind.
       multiple: true
       options:
         - bylickilabs.de
@@ -50,193 +50,193 @@ body:
         - Tool Center
         - Security Research
         - Petition
-        - GitHub Projects
-        - Contact
-        - Translation System
+        - GitHub Projekte
+        - Kontakt
+        - Übersetzungssystem
         - CSS
         - JavaScript
-        - Other
+        - Sonstiges
     validations:
       required: true
 
   - type: input
     id: affected-component
     attributes:
-      label: Affected URL or Component
-      description: Provide the affected URL, page, file, component or feature.
-      placeholder: "Example: https://bylickilabs.de/example.html"
+      label: Betroffene URL oder Komponente
+      description: Gib die betroffene URL, Seite, Datei, Komponente oder Funktion an.
+      placeholder: "Beispiel: https://bylickilabs.de/example.html"
     validations:
       required: true
 
   - type: dropdown
     id: vulnerability-category
     attributes:
-      label: Vulnerability Category
-      description: Select the category that best describes the finding.
+      label: Kategorie der Schwachstelle
+      description: Wähle die Kategorie aus, die den Befund am besten beschreibt.
       options:
-        - Cross Site Scripting
+        - Cross Site Scripting (XSS)
         - Injection
-        - Access Control
-        - Authentication
-        - Authorization
-        - Information Disclosure
-        - Security Misconfiguration
-        - Open Redirect
-        - Cross Site Request Forgery
-        - Insecure Direct Object Reference
-        - Client Side Security
-        - HTTP Security Headers
-        - Dependency Related
-        - Other
-        - Unknown
+        - Zugriffskontrolle
+        - Authentifizierung
+        - Autorisierung
+        - Offenlegung von Informationen
+        - Sicherheitsfehlkonfiguration
+        - Offene Weiterleitung
+        - Cross Site Request Forgery (CSRF)
+        - Unsichere direkte Objektreferenz (IDOR)
+        - Clientseitige Sicherheit
+        - HTTP Sicherheitsheader
+        - Abhängigkeitsbezogen
+        - Sonstiges
+        - Unbekannt
     validations:
       required: true
 
   - type: textarea
     id: description
     attributes:
-      label: Description
-      description: Briefly describe the security issue and what you observed. Do not include unnecessary sensitive details.
-      placeholder: Describe the identified issue, where it occurs and the relevant technical context.
+      label: Beschreibung
+      description: Beschreibe kurz das Sicherheitsproblem und deine Beobachtung. Gib keine unnötigen sensiblen Details an.
+      placeholder: Beschreibe das identifizierte Problem, wo es auftritt und den relevanten technischen Kontext.
     validations:
       required: true
 
   - type: textarea
     id: reproduction
     attributes:
-      label: Steps to Reproduce
-      description: Describe the minimum steps required to reproduce the issue without including secrets or unnecessary sensitive data.
+      label: Schritte zur Reproduktion
+      description: Beschreibe die minimal erforderlichen Schritte zur Reproduktion des Problems, ohne Secrets oder unnötige sensible Daten anzugeben.
       placeholder: |
-        1. Open ...
-        2. Navigate to ...
-        3. Perform ...
-        4. Observe ...
+        1. Öffne ...
+        2. Navigiere zu ...
+        3. Führe ... aus
+        4. Beobachte ...
     validations:
       required: true
 
   - type: textarea
     id: observed-behavior
     attributes:
-      label: Observed Behavior
-      description: Describe what actually happens when the issue is reproduced.
-      placeholder: Describe the observed behavior.
+      label: Beobachtetes Verhalten
+      description: Beschreibe, was tatsächlich passiert, wenn das Problem reproduziert wird.
+      placeholder: Beschreibe das beobachtete Verhalten.
     validations:
       required: true
 
   - type: textarea
     id: expected-behavior
     attributes:
-      label: Expected Behavior
-      description: Describe how the affected component should behave securely.
-      placeholder: Describe the expected behavior.
+      label: Erwartetes Verhalten
+      description: Beschreibe, wie sich die betroffene Komponente aus Sicherheitssicht verhalten sollte.
+      placeholder: Beschreibe das erwartete Verhalten.
     validations:
       required: false
 
   - type: textarea
     id: security-impact
     attributes:
-      label: Security Impact
-      description: Explain the potential security impact of the finding.
-      placeholder: Describe what an attacker could potentially achieve or what security property is affected.
+      label: Sicherheitsauswirkung
+      description: Erläutere die möglichen sicherheitsrelevanten Auswirkungen des Befunds.
+      placeholder: Beschreibe, was ein Angreifer potenziell erreichen könnte oder welche Sicherheitseigenschaft betroffen ist.
     validations:
       required: true
 
   - type: dropdown
     id: severity
     attributes:
-      label: Estimated Severity
-      description: Select your estimated severity. BYLICKILABS may reassess the severity during verification.
+      label: Geschätzter Schweregrad
+      description: Wähle den von dir geschätzten Schweregrad aus. BYLICKILABS kann diesen während der Prüfung neu bewerten.
       options:
-        - Informational
-        - Low
-        - Medium
-        - High
-        - Critical
-        - Unknown
+        - Informativ
+        - Niedrig
+        - Mittel
+        - Hoch
+        - Kritisch
+        - Unbekannt
     validations:
       required: true
 
   - type: textarea
     id: environment
     attributes:
-      label: Environment
-      description: Add relevant environment information if applicable.
+      label: Umgebung
+      description: Ergänze relevante Informationen zur verwendeten Umgebung, sofern zutreffend.
       value: |
-        Operating System:
+        Betriebssystem:
         Browser:
         Browser Version:
-        Device:
-        Additional Information:
+        Gerät:
+        Zusätzliche Informationen:
     validations:
       required: false
 
   - type: textarea
     id: evidence
     attributes:
-      label: Technical Evidence
-      description: Add sanitized screenshots, console output, request or response information, or other non-sensitive evidence. Files can be attached to this field in GitHub.
-      placeholder: Add non-sensitive technical evidence here.
+      label: Technische Nachweise
+      description: Füge bereinigte Screenshots, Konsolenausgaben, Request oder Response Informationen oder andere nicht sensible Nachweise hinzu. Dateien können in GitHub an dieses Feld angehängt werden.
+      placeholder: Füge hier nicht sensible technische Nachweise hinzu.
     validations:
       required: false
 
   - type: textarea
     id: remediation
     attributes:
-      label: Suggested Remediation
-      description: Optional technical recommendation for mitigating or resolving the issue.
-      placeholder: Describe a possible remediation approach.
+      label: Vorgeschlagene Behebung
+      description: Optionale technische Empfehlung zur Behebung oder Risikoreduzierung.
+      placeholder: Beschreibe einen möglichen technischen Lösungsansatz.
     validations:
       required: false
 
   - type: input
     id: discovery-date
     attributes:
-      label: Discovery Date
-      description: Enter the date on which the issue was identified.
-      placeholder: YYYY-MM-DD
+      label: Entdeckungsdatum
+      description: Gib das Datum an, an dem das Problem identifiziert wurde.
+      placeholder: TT.MM.JJJJ
     validations:
       required: false
 
   - type: dropdown
     id: disclosure-status
     attributes:
-      label: Disclosure Status
-      description: Indicate whether information about this issue has already been published elsewhere.
+      label: Offenlegungsstatus
+      description: Gib an, ob Informationen zu diesem Problem bereits an anderer Stelle veröffentlicht wurden.
       options:
-        - Not publicly disclosed
-        - Partially disclosed
-        - Publicly disclosed
-        - Unknown
+        - Nicht öffentlich offengelegt
+        - Teilweise offengelegt
+        - Öffentlich offengelegt
+        - Unbekannt
     validations:
       required: true
 
   - type: dropdown
     id: acknowledgement-preference
     attributes:
-      label: Security Acknowledgement Preference
-      description: Select how you would like to be considered for public recognition after verification and, where required, remediation.
+      label: Wunsch zur öffentlichen Anerkennung
+      description: Wähle aus, wie du nach erfolgreicher Prüfung und gegebenenfalls Behebung öffentlich anerkannt werden möchtest.
       options:
-        - Public acknowledgement with my real name
-        - Public acknowledgement with my alias or pseudonym
-        - Anonymous acknowledgement
-        - No public acknowledgement requested
+        - Öffentliche Anerkennung mit meinem echten Namen
+        - Öffentliche Anerkennung mit meinem Alias oder Pseudonym
+        - Anonyme Anerkennung
+        - Keine öffentliche Anerkennung gewünscht
     validations:
       required: true
 
   - type: input
     id: public-name
     attributes:
-      label: Preferred Public Name or Alias
-      description: If you requested public acknowledgement, enter the exact name or alias that should be displayed.
-      placeholder: "Example: Jane Doe or researcher-name"
+      label: Bevorzugter öffentlicher Name oder Alias
+      description: Wenn du eine öffentliche Anerkennung wünschst, gib den exakten Namen oder Alias an, der angezeigt werden soll.
+      placeholder: "Beispiel: Max Mustermann oder researcher-name"
     validations:
       required: false
 
   - type: input
     id: public-profile
     attributes:
-      label: Public Profile
-      description: Optional GitHub profile, website or professional profile to associate with an acknowledgement.
+      label: Öffentliches Profil
+      description: Optionales GitHub Profil, Website oder berufliches Profil, das mit der Anerkennung verknüpft werden soll.
       placeholder: https://github.com/username
     validations:
       required: false
@@ -244,26 +244,26 @@ body:
   - type: checkboxes
     id: responsible-disclosure
     attributes:
-      label: Responsible Disclosure Confirmation
-      description: Confirm each statement before submitting the report.
+      label: Bestätigung zur verantwortungsvollen Offenlegung
+      description: Bestätige vor dem Absenden jede der folgenden Aussagen.
       options:
-        - label: I did not intentionally cause damage or unnecessary disruption to BYLICKILABS systems.
+        - label: Ich habe BYLICKILABS Systeme nicht vorsätzlich beschädigt oder unnötig beeinträchtigt.
           required: true
-        - label: I did not access, copy or disclose unnecessary personal or confidential information.
+        - label: Ich habe keine unnötigen personenbezogenen oder vertraulichen Informationen aufgerufen, kopiert oder offengelegt.
           required: true
-        - label: I did not publish credentials, secrets or other sensitive information.
+        - label: Ich habe keine Zugangsdaten, Secrets oder andere sensible Informationen veröffentlicht.
           required: true
-        - label: I have not intentionally published technical details that would create unnecessary risk before remediation.
+        - label: Ich habe vor einer Behebung keine technischen Details vorsätzlich veröffentlicht, die ein unnötiges zusätzliches Risiko verursachen könnten.
           required: true
-        - label: The information in this report is accurate to the best of my knowledge.
+        - label: Die Angaben in dieser Meldung sind nach meinem besten Wissen korrekt.
           required: true
 
   - type: textarea
     id: additional-information
     attributes:
-      label: Additional Information
-      description: Add any other non-sensitive information that may help verify or understand the report.
-      placeholder: Additional context, references or notes.
+      label: Zusätzliche Informationen
+      description: Ergänze weitere nicht sensible Informationen, die bei der Prüfung oder beim Verständnis des Befunds helfen können.
+      placeholder: Zusätzlicher Kontext, Referenzen oder Hinweise.
     validations:
       required: false
 
@@ -272,6 +272,6 @@ body:
       value: |
         ━━━━━━━━━━━━ ◆ ━━━━━━━━━━━━
 
-        **BYLICKILABS // Responsible Security Research**
+        **BYLICKILABS // Verantwortungsvolle Sicherheitsforschung**
 
-        Submission of a report does not automatically guarantee public acknowledgement. Findings are reviewed individually. After technical verification and, where necessary, remediation, an acknowledgement may be added to **security-acknowledgements.html**.
+        Das Absenden einer Meldung garantiert nicht automatisch eine öffentliche Anerkennung. Jeder Befund wird individuell geprüft. Nach technischer Verifikation und, falls erforderlich, erfolgreicher Behebung kann eine Anerkennung in **security-acknowledgements.html** aufgenommen werden.
