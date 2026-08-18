@@ -1,0 +1,277 @@
+name: Security Report / Sicherheitsmeldung
+description: Report a potential security issue affecting bylickilabs.de or a BYLICKILABS web component.
+title: "[SECURITY] "
+assignees:
+  - bylickilabs
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # BYLICKILABS Security Report
+
+        Thank you for responsibly reporting a potential security issue affecting **bylickilabs.de** or a related BYLICKILABS component.
+
+        **Important:** This form creates a **public GitHub issue**. Do **not** include passwords, API keys, access tokens, private keys, personal data, confidential information or unnecessary exploit details. If the finding contains sensitive information that should not be publicly disclosed, do not submit those details through this form.
+
+        After submission, the finding will be reviewed and technically verified. If confirmed, the affected BYLICKILABS component can be corrected and the researcher may be considered for recognition in the Security Acknowledgements.
+
+  - type: input
+    id: researcher
+    attributes:
+      label: Researcher Name or Alias
+      description: Enter the name, alias or pseudonym you want associated with this report.
+      placeholder: Example: researcher-name
+    validations:
+      required: false
+
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Information
+      description: Optional contact information for follow-up communication.
+      placeholder: GitHub profile, email address or website
+    validations:
+      required: false
+
+  - type: dropdown
+    id: affected-area
+    attributes:
+      label: Affected Area
+      description: Select every BYLICKILABS area affected by the finding.
+      multiple: true
+      options:
+        - bylickilabs.de
+        - security-acknowledgements.html
+        - Navigation
+        - Footer
+        - Update Center
+        - Download Center
+        - Tool Center
+        - Security Research
+        - Petition
+        - GitHub Projects
+        - Contact
+        - Translation System
+        - CSS
+        - JavaScript
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: affected-component
+    attributes:
+      label: Affected URL or Component
+      description: Provide the affected URL, page, file, component or feature.
+      placeholder: Example: https://bylickilabs.de/example.html
+    validations:
+      required: true
+
+  - type: dropdown
+    id: vulnerability-category
+    attributes:
+      label: Vulnerability Category
+      description: Select the category that best describes the finding.
+      options:
+        - Cross Site Scripting
+        - Injection
+        - Access Control
+        - Authentication
+        - Authorization
+        - Information Disclosure
+        - Security Misconfiguration
+        - Open Redirect
+        - Cross Site Request Forgery
+        - Insecure Direct Object Reference
+        - Client Side Security
+        - HTTP Security Headers
+        - Dependency Related
+        - Other
+        - Unknown
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Briefly describe the security issue and what you observed. Do not include unnecessary sensitive details.
+      placeholder: Describe the identified issue, where it occurs and the relevant technical context.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Describe the minimum steps required to reproduce the issue without including secrets or unnecessary sensitive data.
+      placeholder: |
+        1. Open ...
+        2. Navigate to ...
+        3. Perform ...
+        4. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: observed-behavior
+    attributes:
+      label: Observed Behavior
+      description: Describe what actually happens when the issue is reproduced.
+      placeholder: Describe the observed behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: Describe how the affected component should behave securely.
+      placeholder: Describe the expected behavior.
+    validations:
+      required: false
+
+  - type: textarea
+    id: security-impact
+    attributes:
+      label: Security Impact
+      description: Explain the potential security impact of the finding.
+      placeholder: Describe what an attacker could potentially achieve or what security property is affected.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Estimated Severity
+      description: Select your estimated severity. BYLICKILABS may reassess the severity during verification.
+      options:
+        - Informational
+        - Low
+        - Medium
+        - High
+        - Critical
+        - Unknown
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Add relevant environment information if applicable.
+      value: |
+        Operating System:
+        Browser:
+        Browser Version:
+        Device:
+        Additional Information:
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Technical Evidence
+      description: Add sanitized screenshots, console output, request or response information, or other non-sensitive evidence. Files can be attached to this field in GitHub.
+      placeholder: Add non-sensitive technical evidence here.
+    validations:
+      required: false
+
+  - type: textarea
+    id: remediation
+    attributes:
+      label: Suggested Remediation
+      description: Optional technical recommendation for mitigating or resolving the issue.
+      placeholder: Describe a possible remediation approach.
+    validations:
+      required: false
+
+  - type: input
+    id: discovery-date
+    attributes:
+      label: Discovery Date
+      description: Enter the date on which the issue was identified.
+      placeholder: YYYY-MM-DD
+    validations:
+      required: false
+
+  - type: dropdown
+    id: disclosure-status
+    attributes:
+      label: Disclosure Status
+      description: Indicate whether information about this issue has already been published elsewhere.
+      options:
+        - Not publicly disclosed
+        - Partially disclosed
+        - Publicly disclosed
+        - Unknown
+    validations:
+      required: true
+
+  - type: dropdown
+    id: acknowledgement-preference
+    attributes:
+      label: Security Acknowledgement Preference
+      description: Select how you would like to be considered for public recognition after verification and, where required, remediation.
+      options:
+        - Public acknowledgement with my real name
+        - Public acknowledgement with my alias or pseudonym
+        - Anonymous acknowledgement
+        - No public acknowledgement requested
+    validations:
+      required: true
+
+  - type: input
+    id: public-name
+    attributes:
+      label: Preferred Public Name or Alias
+      description: If you requested public acknowledgement, enter the exact name or alias that should be displayed.
+      placeholder: Example: Jane Doe or researcher-name
+    validations:
+      required: false
+
+  - type: input
+    id: public-profile
+    attributes:
+      label: Public Profile
+      description: Optional GitHub profile, website or professional profile to associate with an acknowledgement.
+      placeholder: https://github.com/username
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: responsible-disclosure
+    attributes:
+      label: Responsible Disclosure Confirmation
+      description: Confirm each statement before submitting the report.
+      options:
+        - label: I did not intentionally cause damage or unnecessary disruption to BYLICKILABS systems.
+          required: true
+        - label: I did not access, copy or disclose unnecessary personal or confidential information.
+          required: true
+        - label: I did not publish credentials, secrets or other sensitive information.
+          required: true
+        - label: I have not intentionally published technical details that would create unnecessary risk before remediation.
+          required: true
+        - label: The information in this report is accurate to the best of my knowledge.
+          required: true
+
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: Additional Information
+      description: Add any other non-sensitive information that may help verify or understand the report.
+      placeholder: Additional context, references or notes.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ━━━━━━━━━━━━ ◆ ━━━━━━━━━━━━
+
+        **BYLICKILABS // Responsible Security Research**
+
+        Submission of a report does not automatically guarantee public acknowledgement. Findings are reviewed individually. After technical verification and, where necessary, remediation, an acknowledgement may be added to **security-acknowledgements.html**.
