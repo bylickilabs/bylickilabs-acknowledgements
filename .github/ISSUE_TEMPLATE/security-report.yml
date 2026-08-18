@@ -21,7 +21,7 @@ body:
     attributes:
       label: Researcher Name or Alias
       description: Enter the name, alias or pseudonym you want associated with this report.
-      placeholder: Example: researcher-name
+      placeholder: "Example: researcher-name"
     validations:
       required: false
 
@@ -64,7 +64,7 @@ body:
     attributes:
       label: Affected URL or Component
       description: Provide the affected URL, page, file, component or feature.
-      placeholder: Example: https://bylickilabs.de/example.html
+      placeholder: "Example: https://bylickilabs.de/example.html"
     validations:
       required: true
 
@@ -228,7 +228,7 @@ body:
     attributes:
       label: Preferred Public Name or Alias
       description: If you requested public acknowledgement, enter the exact name or alias that should be displayed.
-      placeholder: Example: Jane Doe or researcher-name
+      placeholder: "Example: Jane Doe or researcher-name"
     validations:
       required: false
 
