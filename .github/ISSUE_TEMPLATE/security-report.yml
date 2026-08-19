@@ -255,6 +255,18 @@ body:
           required: true
         - label: Ich habe vor einer Behebung keine technischen Details vorsätzlich veröffentlicht, die ein unnötiges zusätzliches Risiko verursachen könnten.
           required: true
+        - label: Ich habe keine Denial of Service Angriffe oder vergleichbare Tests durchgeführt, die die Verfügbarkeit von Systemen beeinträchtigen könnten.
+          required: true
+        - label: Ich habe keine Social Engineering, Phishing oder Täuschungsmethoden gegenüber Personen eingesetzt.
+          required: true
+        - label: Ich habe keine Systeme, Konten oder Dienste Dritter getestet, die nicht ausdrücklich zum BYLICKILABS Umfeld gehören.
+          required: true
+        - label: Ich habe meine Tests auf das zur Verifikation der gemeldeten Schwachstelle erforderliche Maß begrenzt.
+          required: true
+        - label: Ich habe Tests beendet oder eingeschränkt, sobald ein erhöhtes Risiko für Daten, Systeme oder Dritte erkennbar wurde.
+          required: true
+        - label: Ich werde zusätzliche technische Details auf Anfrage vertraulich behandeln, bis eine angemessene Prüfung und gegebenenfalls Behebung erfolgt ist.
+          required: true
         - label: Die Angaben in dieser Meldung sind nach meinem besten Wissen korrekt.
           required: true
 
